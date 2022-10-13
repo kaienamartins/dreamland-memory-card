@@ -1,0 +1,56 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #010b13;
+    margin: 0 auto;
+    padding: 0 auto;
+    overflow-x: hidden;
+}
+
+.card.unmatch{
+    background: url('../../public/assets/horse.png');
+    border: 2px solid red;
+    border-radius: 5px;
+    animation: 2s hideCard linear;
+}
+
+.card{
+    background: url('../../public/assets/frontcard.png');
+    width: 100px;
+    height: 150px;
+    border-radius: 15px;
+    margin: 5px 5px;
+    animation: 2s hideCard linear;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    opacity: 0;
+    animation: 2s hideImage linear;
+}
+
+.card.active img{
+opacity: 1;
+}
+
+
+@keyframes hideImage {
+0%, 84%{
+    opacity: 1;
+}85%{
+    opacity: 0;
+}
+}
+
+@media only screen and (max-width: 480px) {
+    .card{
+        width: 100px;
+        height: 150px;
+    }
+    .card img {
+        width: 100%;
+        height: 100%;
+    }
+
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import Cards from "./Components/Cards";
+import "./css/reset.css";
+import "./css/style.css";
 
-function App() {
+export default function App() {  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <Title>Dreamland memory card</Title>
+        <Cards/>
+      </>
   );
 }
 
-export default App;
+const Title = styled.h1 `
+  font-size:60px; 
+  color: #fafafa;
+  text-align: center;
+  font-weight: 700;
+  margin: auto;
+  padding-top: 30px;
+  width: 100%;
+  @media only screen and (max-width: 480px)  {
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    }
+`
